@@ -158,7 +158,7 @@ int cont=0;
 int numero=(int)(Math.random()*10)+1;
 int complemento= (int)(Math.random()*100)+1;
 
-
+if (nombre!=""){
 if (numero>1 && numero <5){
 dato =nombre+complemento+"@gmail.com";
 }else{
@@ -169,7 +169,18 @@ cont++;
 }
 dato=ABC+"@gmail.com";
 }
+}
+else{
+while(cont!=10){
+int a=(int)(Math.random()*26);
+ABC+=Abc[a];
+cont++;
+}
+dato=ABC+"@gmail.com";
+
+}
 return dato;
+
 }
 public String NombresM()throws IOException{
 String dato =NombreM.readLine();
